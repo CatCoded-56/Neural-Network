@@ -1,0 +1,27 @@
+# Python virtual environments
+.venv/
+.venv-1/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pytest cache
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pylance, VS Code and editor files
+.vscode/
+*.code-workspace
+
+# macOS files
+.DS_Store
+
+# logs
+*.log
+
+# matplotlib output
+*.png
