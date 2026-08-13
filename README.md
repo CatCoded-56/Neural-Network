@@ -39,6 +39,10 @@ python train_and_eval.py --demo network
 python train_and_eval.py --demo network --visualize
 ```
 
+```Deep Network Visualization
+& "c:/Users/newbe/Documents/Neural Network/Neuron 1/.venv-1/Scripts/python.exe" deeper_network.py
+```
+
 6. If visualization does not open, the script will save a PNG file instead.
 
 7. Run tests:

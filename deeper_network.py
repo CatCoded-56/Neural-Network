@@ -110,7 +110,7 @@ def main():
         rng=np.random.default_rng(42),
     )
 
-    epochs = 3000
+    epochs = 200000
     batch_size = 4
     update_every = 10
 
