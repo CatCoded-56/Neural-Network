@@ -3,34 +3,42 @@ from typing import Dict, Optional, Tuple, Union
 
 
 def sigmoid(x: np.ndarray) -> np.ndarray:
+    """Apply the sigmoid activation to an input array."""
     return 1.0 / (1.0 + np.exp(-x))
 
 
 def sigmoid_derivative(logits: np.ndarray, output: np.ndarray) -> np.ndarray:
+    """Return the derivative of the sigmoid activation for backpropagation."""
     return output * (1.0 - output)
 
 
 def relu(x: np.ndarray) -> np.ndarray:
+    """Apply the ReLU activation to an input array."""
     return np.maximum(0.0, x)
 
 
 def relu_derivative(logits: np.ndarray, output: np.ndarray) -> np.ndarray:
+    """Return the derivative of ReLU for backpropagation."""
     return (logits > 0).astype(float)
 
 
 def tanh(x: np.ndarray) -> np.ndarray:
+    """Apply the tanh activation to an input array."""
     return np.tanh(x)
 
 
 def tanh_derivative(logits: np.ndarray, output: np.ndarray) -> np.ndarray:
+    """Return the derivative of tanh for backpropagation."""
     return 1.0 - output ** 2
 
 
 def linear(x: np.ndarray) -> np.ndarray:
+    """Apply the identity activation."""
     return x
 
 
 def linear_derivative(logits: np.ndarray, output: np.ndarray) -> np.ndarray:
+    """Return the derivative of the identity activation, which is always 1."""
     return np.ones_like(output)
 
 

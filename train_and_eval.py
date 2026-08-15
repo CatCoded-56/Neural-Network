@@ -4,6 +4,7 @@ from neuron import Neuron, NeuralNetwork, visualize_network
 
 
 def demo_neuron():
+    """Train a single neuron on a simple binary classification problem and print the result."""
     X = np.array([
         [0, 0],
         [0, 1],
@@ -22,6 +23,7 @@ def demo_neuron():
 
 
 def demo_network():
+    """Train a tiny neural network on the XOR task and return the learned model."""
     X = np.array([
         [0.0, 0.0],
         [0.0, 1.0],
@@ -49,6 +51,7 @@ def demo_network():
 
 
 def interactive_session(model):
+    """Prompt for feature inputs and print the model's probability and class prediction."""
     print("\nInteractive mode: enter comma-separated feature values, or 'q' to quit.")
     feature_count = model.n_inputs if isinstance(model, Neuron) else model.layer_sizes[0]
     while True:
@@ -70,6 +73,7 @@ def interactive_session(model):
 
 
 def main():
+    """CLI entry point for training the single-neuron and tiny-network demos."""
     parser = argparse.ArgumentParser(description="Train and inspect the neuron or small network.")
     parser.add_argument("--demo", choices=["neuron", "network"], default="neuron", help="Choose the demo to run")
     parser.add_argument("--visualize", action="store_true", help="Render a network diagram if possible")
